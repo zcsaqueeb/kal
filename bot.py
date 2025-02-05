@@ -1,17 +1,16 @@
-import shareithub
-import requests
+import threading
 import time
 import json
 import datetime
-from shareithub import shareithub
+import requests
+import os
 from colorama import Fore, Style, init
 from tabulate import tabulate
 from tqdm import tqdm
-import os
 import signal
 
-init(autoreset=True) 
-shareithub()
+init(autoreset=True)
+
 API_URL = "https://kaleidofinance.xyz/api/testnet"
 
 class KaleidoMiningBot:
@@ -98,8 +97,6 @@ class KaleidoMiningBot:
             self.log_status()
 
     def log_status(self):
-        print("\033c", end="")
-
         uptime = str(datetime.timedelta(seconds=int(time.time() - self.mining_state["startTime"])))
 
         table_data = [
@@ -156,8 +153,15 @@ class MiningCoordinator:
         print(Fore.GREEN + f"✅ Loaded {len(wallets)} wallets\n")
 
         self.bots = [KaleidoMiningBot(wallet, i + 1) for i, wallet in enumerate(wallets)]
+
+        threads = []
         for bot in self.bots:
-            bot.initialize()
+            thread = threading.Thread(target=bot.initialize)
+            threads.append(thread)
+            thread.start()
+
+        for thread in threads:
+            thread.join()
 
         signal.signal(signal.SIGINT, self.shutdown)
 
