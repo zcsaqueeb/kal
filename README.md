@@ -1,4 +1,4 @@
-# KALEDIO BOT AUTO MINNING 
+# KALEIDO BOT AUTO MINNING 
 
 ## JOIN : [https://kaleidofinance.xyz](https://kaleidofinance.xyz/testnet?ref=GDS6QPO8)
 
