@@ -29,6 +29,11 @@ nano wallets.txt
 
 paste your address. and after done. u can save ( CTRL + X + Y , ENTER )
 
+Done ? Run bot now :
+```
+python3 bot.py
+```
+
 # dont forget to join :
 - [TELEGRAM](https://t.me/SHAREITHUB_COM)
 - [YOUTUBE](https://www.youtube.com/channel/UCUvH2S-T6T_hc7DjxhVd28A)
