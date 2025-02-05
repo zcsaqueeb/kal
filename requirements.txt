@@ -1,0 +1,5 @@
+shareithub
+requests
+colorama
+tabulate
+tqdm
