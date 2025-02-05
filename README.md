@@ -4,7 +4,7 @@
 
 # TUTORIAL RUNNING BOT :
 
-BY VIDEO : [CLICK HERE TO VIEW]([XXX](https://youtu.be/Fwa3WNGTrw0))
+BY VIDEO : [CLICK HERE TO VIEW](https://youtu.be/Fwa3WNGTrw0)
 
 BY TEXT :
 
